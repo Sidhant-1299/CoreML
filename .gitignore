@@ -1,0 +1,16 @@
+#Environments
+venv/
+.env
+
+#Distribution/packaging
+dist/
+coreml.egg-info
+
+
+__pycache__
+*/__pycache__
+*/*/__pycache__
+
+# Jupyter Notebook
+/notebook/.ipynb_checkpoints
+

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools >= 58.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coreml"
+version = "1.0.0"
+
+description = """
+Building Machine learning algorithims from scratch 
+and benchmarking it against popular frameworks on real datasets
+"""
+
+keywords = ["Machinelearning","Scratch","Core"]
+
+dependencies = [
+    "numpy == 2.0.2",
+    "pandas == 2.2.3",
+    "matplotlib == 3.9.4",
+    "scikit-learn == 1.6.1",
+    "jupyter == 1.1.1"
+]
+requires-python = ">=3.9"
+
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    {name = "Sidhant Raj Khati",email = "sidhant.raj.khati@gmail.com"}
+]
+
+license = { text = "MIT" }
+
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "Operating System :: OS Independent",
+]
+
+[project.urls]
+repository = "https://github.com/Sidhant-1299/CoreML.git"
+
+[tool.setuptools.packages]
+find = {}
