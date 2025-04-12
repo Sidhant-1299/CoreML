@@ -50,6 +50,12 @@ class SimpleLinearRegression(LinearRegression):
 
         self.x_bar = mean(self.x)
         self.y_bar = mean(self.y)
+
+        #For calculating coeff b1
+        self.covariance_xy = covariance(self.x,self.y)
+        self.var_x = variance(self.x)
+        
+
         self.b0 = None
         self.b1 = None
         self.fitted = False #Flag to check if model is fit
@@ -58,7 +64,9 @@ class SimpleLinearRegression(LinearRegression):
         """
         β1 = ∑(x-x̄)(y-ȳ)/∑(x - x̄)²
         """
-        return covariance(self.x,self.y)/variance(self.x)
+        if self.var_x == 0:
+            raise ZeroDivisionError
+        return self.covariance_xy/self.var_x
         
 
     def calculate_b0(self) -> float:
