@@ -48,8 +48,8 @@ class SimpleLinearRegression(LinearRegression):
         if self.x.shape[0] != self.y.shape[0]:
             raise ValueError("Column shapes are of different sizes")
 
-        self.x_bar = mean(x)
-        self.y_bar = mean(y)
+        self.x_bar = mean(self.x)
+        self.y_bar = mean(self.y)
         self.b0 = None
         self.b1 = None
         self.fitted = False #Flag to check if model is fit
